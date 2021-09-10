@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Aplikasi PBB</string>
+    <string name="welcome">Ganti Background</string>
+    <string name="kirim">Ganti</string>
+    <string name="putih">Putih</string>
+    <string name="merah">Merah</string>
+    <string name="hijau">Hijau</string>
+    <string name="biru">Biru</string>
+    <string name="website_kampus">website kampus</string>
+    <string name="keluar">Keluar</string>
+</resources>
