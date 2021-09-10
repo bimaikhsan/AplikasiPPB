@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonUbah.setOnClickListener(v -> {
             Context context = getApplicationContext();
-            CharSequence text = "Pilih Warna !";
+            CharSequence text = "Pilih Warna!";
             int color = 0;
             if (ckputih.isChecked()){
                 color = Color.rgb(255,255,255);
