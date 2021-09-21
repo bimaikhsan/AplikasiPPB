@@ -1,12 +1,17 @@
 package com.example.aplikasipbb;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RelativeLayout;
@@ -65,5 +70,29 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.option_menu,menu);
+        return true;
+        //return super.onCreateOptionsMenu(menu);
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.about:
+                Toast toast1 = Toast.makeText(this, "Tentang",Toast.LENGTH_SHORT);
+                toast1.show();
+            case R.id.setting:
+                Toast toast2 = Toast.makeText(this, "Setting",Toast.LENGTH_SHORT);
+                toast2.show();
+            case R.id.help:
+                Toast toast3 =  Toast.makeText(this, "Bantuan",Toast.LENGTH_SHORT);
+                toast3.show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
