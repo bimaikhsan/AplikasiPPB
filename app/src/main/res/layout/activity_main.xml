@@ -6,54 +6,51 @@
     android:gravity="center"
     android:id="@+id/layout"
     tools:context=".MainActivity">
-    <TextView
-        android:id="@+id/warna"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/welcome"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-    <CheckBox
-        android:id="@+id/bgputih"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/warna"
-        android:layout_centerHorizontal="true"
-        android:width="100dp"
-        android:text="@string/putih" />
+    <LinearLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <CheckBox
-        android:id="@+id/bgmerah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/bgputih"
-        android:width="100dp"
-        android:text="@string/merah" />
+            <Button
+                android:id="@+id/checkbox"
+                android:layout_height="88dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                android:text="Checkbox" />
+            <Button
+                android:id="@+id/url"
+                android:layout_columnWeight="1"
+                android:layout_height="88dp"
+                android:layout_rowWeight="2"
+                android:layout_margin="10dp"
+                android:text="Webview"/>
+            <Button
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="3"
+                android:layout_margin="10dp"
+                android:layout_height="88dp"
+                android:text=""/>
+            <Button
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="4"
+                android:layout_margin="10dp"
+                android:layout_height="88dp"
+                android:text="AlertDialog"/>
 
-    <Button
-        android:id="@+id/ubah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/bgmerah"
-        android:layout_centerHorizontal="true"
-        android:width="200dp"
-        android:text="@string/kirim" />
-    <Button
-        android:id="@+id/url"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ubah"
-        android:layout_centerHorizontal="true"
-        android:width="200dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/website_kampus" />
+        </GridLayout>
+    </LinearLayout>
+
     <Button
         android:id="@+id/keluar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/url"
+        android:layout_below="@id/grid"
         android:layout_centerHorizontal="true"
         android:width="200dp"
         android:layout_marginTop="10dp"
