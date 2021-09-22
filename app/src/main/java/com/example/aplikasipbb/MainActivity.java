@@ -15,9 +15,11 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    TextView varResultNama;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox ckputih = findViewById(R.id.bgputih);
         CheckBox ckmerah = findViewById(R.id.bgmerah);
+
+        varResultNama = findViewById(R.id.resultNama);
+        varResultNama.setText(getIntent().getStringExtra("ISINYA"));
 
         buttonUbah.setOnClickListener(v -> {
             Context context = getApplicationContext();

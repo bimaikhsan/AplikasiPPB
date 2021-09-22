@@ -6,12 +6,14 @@
     android:gravity="center"
     android:id="@+id/layout"
     tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/warna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/welcome"
+        android:paddingTop="10dp"
         android:textSize="25sp"
         android:textStyle="bold" />
     <CheckBox
@@ -59,5 +61,26 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/red"
         android:text="@string/keluar" />
+
+    <TextView
+        android:id="@+id/resultNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/greeting"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="namanya"
+        />
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/keluar"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="hi, "
+        />
 
 </RelativeLayout>
