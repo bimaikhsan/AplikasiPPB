@@ -12,12 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplikasiPBB">
         <activity
-            android:name=".CheckboxActivity"
-            android:exported="true" />
-        <activity
             android:name=".SplashScreen"
             android:exported="true"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,7 +28,9 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
-            android:exported="true" />
+            android:exported="true"/>
+
+<!--        </activity>-->
     </application>
 
 </manifest>

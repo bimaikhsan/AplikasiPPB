@@ -22,15 +22,37 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        RelativeLayout mainlayout = findViewById(R.id.layout);
+        Button buttonUbah = findViewById(R.id.ubah);
         Button buttonUrl = findViewById(R.id.url);
         Button buttonKeluar = findViewById(R.id.keluar);
-        Button checkBox = findViewById(R.id.checkbox);
 
-        checkBox.setOnClickListener(view -> {
-            finish();
-            Intent intent = new Intent(this, CheckboxActivity.class);
-            startActivity(intent);
+        CheckBox ckputih = findViewById(R.id.bgputih);
+        CheckBox ckmerah = findViewById(R.id.bgmerah);
+
+        buttonUbah.setOnClickListener(v -> {
+            Context context = getApplicationContext();
+            CharSequence text = "Pilih Warna!";
+            int color = 0;
+            if (ckputih.isChecked()){
+                color = Color.rgb(255,255,255);
+                text = "Putih";
+            }
+            if (ckmerah.isChecked()) {
+                color = Color.rgb(255, 0, 0);
+                text = "Merah";
+            }
+            if (ckputih.isChecked() & ckmerah.isChecked()) {
+                color = Color.rgb(255, 102, 102);
+                text = "Merah Muda";
+            }
+
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+
+            mainlayout.setBackgroundColor(color);
+
         });
         buttonUrl.setOnClickListener(v -> {
             finish();
