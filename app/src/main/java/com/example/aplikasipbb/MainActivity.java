@@ -8,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         Button buttonUbah = findViewById(R.id.ubah);
         Button buttonUrl = findViewById(R.id.url);
         Button buttonKeluar = findViewById(R.id.keluar);
+        Button buttonFragment = findViewById(R.id.fragment);
+        Button buttonFacebook = findViewById(R.id.implisit);
 
         CheckBox ckputih = findViewById(R.id.bgputih);
         CheckBox ckmerah = findViewById(R.id.bgmerah);
@@ -63,6 +66,16 @@ public class MainActivity extends AppCompatActivity {
             finish();
             Intent intent = new Intent(this, WebkampusActivity.class);
             startActivity(intent);
+        });
+        buttonFragment.setOnClickListener(v -> {
+            finish();
+            Intent intent = new Intent(this, FragmentActivity.class);
+            startActivity(intent);
+        });
+        buttonFacebook.setOnClickListener(view -> {
+            finish();
+            Intent implicit = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.facebook.com"));
+            startActivity(implicit);
         });
         buttonKeluar.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);

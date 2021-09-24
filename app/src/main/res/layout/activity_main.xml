@@ -52,10 +52,28 @@
         android:layout_marginTop="10dp"
         android:text="@string/website_kampus" />
     <Button
-        android:id="@+id/keluar"
+        android:id="@+id/fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/url"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:layout_marginTop="10dp"
+        android:text="Fragment" />
+    <Button
+        android:id="@+id/implisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:layout_marginTop="10dp"
+        android:text="Facebook" />
+    <Button
+        android:id="@+id/keluar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/implisit"
         android:layout_centerHorizontal="true"
         android:width="200dp"
         android:layout_marginTop="10dp"
