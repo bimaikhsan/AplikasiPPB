@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/about"
-        android:title="About"
+        android:title="Play"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/setting"
-        android:title="Setting"
+        android:title="Play Service"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/help"
-        android:title="Help"
+        android:title="Stop Service"
         app:showAsAction="never"/>
 </menu>

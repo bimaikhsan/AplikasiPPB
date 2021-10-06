@@ -8,8 +8,10 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -100,13 +102,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.about:
-                Toast toast1 = Toast.makeText(this, "Tentang",Toast.LENGTH_SHORT);
-                toast1.show();
+                MediaPlayer player = MediaPlayer.create(this, Settings.System.DEFAULT_ALARM_ALERT_URI);
+                player.setLooping(true);
+                player.start();
+                return true;
             case R.id.setting:
-                Toast toast2 = Toast.makeText(this, "Setting",Toast.LENGTH_SHORT);
+                startService(new Intent(this, MyService.class));
+                Toast toast2 =  Toast.makeText(this, "Start Service",Toast.LENGTH_SHORT);
                 toast2.show();
+                return true;
             case R.id.help:
-                Toast toast3 =  Toast.makeText(this, "Bantuan",Toast.LENGTH_SHORT);
+                stopService(new Intent(this, MyService.class));
+                Toast toast3 =  Toast.makeText(this, "Stop Service",Toast.LENGTH_SHORT);
                 toast3.show();
                 return true;
             default:
